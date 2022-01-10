@@ -13,12 +13,6 @@ namespace cs05_paskaita
 
             #endregion
 
-            #region TEORIJA -
-            #endregion
-
-            #region TEORIJA -
-            #endregion
-
             //ClassWork1();
             //ClassWork2();
             //ClassWork2_ALT();
@@ -30,6 +24,7 @@ namespace cs05_paskaita
             //ClassWork8();
             ClassWork9();
             //ClassWork10();
+            //ClassWork11();
         }
         public static void ClassWork1()
         {
@@ -102,7 +97,7 @@ namespace cs05_paskaita
             }
             int counter1 = 0, counter2 = 0, counter3 = 0, counter4 = 0, counter5 = 0;
 
-            foreach (var item in randomNumbersList)
+            foreach (var item in randomNumbersList) // <-- šitas sprendimas yra blogas, nes nesiscale'ina
             {
                 if (item == 1) counter1++;
                 else if (item == 2) counter2++;
@@ -201,6 +196,7 @@ namespace cs05_paskaita
             Console.WriteLine("");
             Console.WriteLine($"2nd min: {myNums[1]}");
             Console.WriteLine($"2nd max: {myNums[myNums.Length - 2]}");
+            //Blogas sprendimas čia, reikia per if'ą pasirašyti
         }
 
         public static void ClassWork5()
@@ -221,7 +217,7 @@ namespace cs05_paskaita
 
             for (int i = 0; i < 3; i++)       //
             {                                 // ciklas tiesiog kuria koordinates
-                for (int j = 0; j < 3; j++)   // indeksui, kuris spausdinamas
+                for (int j = 0; j < 3; j++)   // index'ui, kuris spausdinamas
                 {
                     Console.Write($" {array2D[i, j]} ");
                     count++;
